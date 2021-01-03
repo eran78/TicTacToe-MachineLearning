@@ -1,4 +1,4 @@
-from bke import MLAgent, is_winner, opponent, train, load, validate, RandomAgent, plot_validation
+from bke import MLAgent, is_winner, opponent, RandomAgent, train_and_plot
 
 class MyAgent(MLAgent):
   def evaluate(self, board):
@@ -12,11 +12,11 @@ class MyAgent(MLAgent):
     return reward
 
 my_agent = MyAgent()
-my_agent = load('MyAgent_3000')
+random_agent = RandomAgent()
 
-my_agent.learning = False
-
-validation_agent = RandomAgent()
-validation_result = validate(agent_x=my_agent, agent_o=validation_agent, iterations=100)
-
-plot_validation(validation_result)
+train_and_plot(
+    agent=my_agent,
+    validation_agent=random_agent,
+    iterations=50,
+    trainings=100,
+    validations=1000)
