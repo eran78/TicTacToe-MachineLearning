@@ -1,4 +1,4 @@
-from bke import MLAgent, is_winner, opponent, RandomAgent, train_and_plot
+from bke import MLAgent, is_winner, opponent, RandomAgent, train_and_plot, start
 
 class MyAgent(MLAgent):
   def evaluate(self, board):
@@ -20,3 +20,5 @@ train_and_plot(
     iterations=50,
     trainings=100,
     validations=1000)
+
+start(player_x=my_agent)
