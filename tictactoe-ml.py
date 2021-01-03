@@ -1,3 +1,5 @@
+import random
+
 from bke import MLAgent, is_winner, opponent, RandomAgent, train_and_plot, start
 
 class MyAgent(MLAgent):
