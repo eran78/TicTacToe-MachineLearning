@@ -12,6 +12,8 @@ class MyAgent(MLAgent):
       reward = 0
 
     return reward
+  
+random.seed(1)
 
 my_agent = MyAgent()
 random_agent = RandomAgent()
